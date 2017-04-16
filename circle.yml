@@ -9,8 +9,8 @@ general:
      
 test:
   override:
-    - mvnDebug -DforkCount=0 test
-
+    - mvn install -DskipTest
+    
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
     - find . -type f -regex ".*/target/failsafe-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
