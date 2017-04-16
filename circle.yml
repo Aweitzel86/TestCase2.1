@@ -9,7 +9,7 @@ general:
      
 test:
   override:
-    - mvn install -DskipTest
+    - mvn clean install -DskipTests
     
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
