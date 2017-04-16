@@ -9,7 +9,6 @@ general:
      
 test:
   override:
-    - mvn clean install
     - mvn test -Dtest=PeformanceTest
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
