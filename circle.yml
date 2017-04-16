@@ -9,7 +9,7 @@ general:
      
 test:
   override:
-    - mvn clean install -DskipTests
+    - mvn clean install
     
   post:
     - mkdir -p .*/target/junit
